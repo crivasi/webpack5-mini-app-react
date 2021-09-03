@@ -219,7 +219,7 @@ Luego corremos `npm run dev`
 
   export default App;
   ```
-  Si vemos en la consola del navegador, veremos muchos errores porque estamos intentando hacer un concat a values que no está inicializado como array, pero ver esto es difícil, entonces hagamos que webpack nos muestre dónde está el error.
+  Si vemos en la consola del navegador, veremos muchos errores porque estamos intentando hacer un `concat` a `values` que no está inicializado como `[]`, pero ver esto es difícil, entonces hagamos que webpack nos muestre dónde está el error.
   Agregamos el `devtool` en el config de webpack:
   ```
   ...
@@ -228,7 +228,7 @@ Luego corremos `npm run dev`
 
   devtool: 'source-map'
   ```
-  al correr de nuevo `npm run dev` se demorará un poco más porque es costoso en tiempo y computación, pero ayudará a debuggear
+  al correr de nuevo `npm run dev` se demorará un poco más porque es costoso en tiempo y computación, pero ayudará a debuggear mostrando exactamente dónde está el error
 
 * Cambiemos ahora el mode del comando `build` en el `package.json a production` para que webpack minifique el código:
 `"build": "webpack --mode=production"`
