@@ -4,7 +4,7 @@ const path = require('path');
 const rulesForStyles = {
   test: /\.css$/,
   use: ['style-loader', 'css-loader']
-}
+};
 const rulesForJavascript = {
   test: /\.js$/, // para que evalúe lo que termina en js
   loader: 'babel-loader',
@@ -45,7 +45,7 @@ module.exports = (env, argv) => {
       port: 3000,
       compress: true
     }
-  }
+  };
 
   if (!isProduction) {
     config.devtool = 'source-map';
